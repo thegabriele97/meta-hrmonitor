@@ -1,4 +1,4 @@
-obj-m := mod.o
+obj-m := virtualppg.o
 SRC := $(shell pwd)
 
 all:

@@ -7,7 +7,7 @@ inherit module
 COMPATIBLE_MACHINE = "raspberrypi"
 
 SRC_URI = "file://Makefile \
-           file://mod.c \
+           file://virtualppg.c \
            "
 
 S = "${WORKDIR}"
