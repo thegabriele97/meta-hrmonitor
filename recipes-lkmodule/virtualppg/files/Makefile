@@ -2,11 +2,10 @@ obj-m := virtualppg.o
 SRC := $(shell pwd)
 
 all:
-	$(MAKE) -C $(KERNEL_SRC) M=$(SRC)
-	modules_install
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules
 
 modules_install:
-	$(MAKE) INSTALL_MOD_DIR=kernel/drivers/misc -C $(KERNEL_SRC) M=$(SRC)
+	$(MAKE) INSTALL_MOD_DIR=kernel/drivers/misc -C $(KERNEL_SRC) M=$(SRC) modules_install
 
 clean:
 	rm -f *.o *~ core .depend .*.cmd *.ko *.mod.c
