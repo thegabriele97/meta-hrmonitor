@@ -8,7 +8,7 @@ COMPATIBLE_MACHINE = "raspberrypi"
 
 SRC_URI = "file://Makefile \
            file://virtualppg.c \
-           file://data.h
+           file://data.h \
            "
 
 S = "${WORKDIR}"
