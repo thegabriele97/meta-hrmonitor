@@ -73,12 +73,12 @@ static ssize_t read(struct file *filp, char *buf, size_t count, loff_t *f_pos) {
     ssize_t bytes_read = 0;
     char *curr_ptr;
 
-    PRINTK(KERN_DEBUG, "Request for reading %d bytes from %llu\n", count, *f_pos);
+    //PRINTK(KERN_DEBUG, "Request for reading %d bytes from %llu\n", count, *f_pos);
 
     while (count > 0) { 
 
         curr_ptr = ((char *)ppg) + *f_pos;
-        PRINTK(KERN_DEBUG, "Copying to user %#x, %d bytes from %#x : %#x\n", (int)buf, 1, (int)curr_ptr, (char)(*curr_ptr));
+        //PRINTK(KERN_DEBUG, "Copying to user %#x, %d bytes from %#x : %#x\n", (int)buf, 1, (int)curr_ptr, (char)(*curr_ptr));
         if (copy_to_user(buf++, curr_ptr, 1) != 0) {
             PRINTK_ERR("Something bad happened while copying data to user. Returning..\n");
             break;
