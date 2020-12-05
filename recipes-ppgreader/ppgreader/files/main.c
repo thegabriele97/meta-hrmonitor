@@ -13,7 +13,7 @@ int main() {
     int retval1, retval2 = 0;
 
     if (retval1 = pipe(pipe_fd) < 0) {
-        fputs(stderr, "Error: unable to create the pipe\n");
+        fputs("Error: unable to create the pipe\n", stderr);
         return retval1;
     } 
 
