@@ -6,7 +6,14 @@ It offers two recipes, one includes a linux kernel module that implements a virt
 
 ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) *This is tested only on RaspberryPi 1!*
 
+## Add compatibility with other machines
 ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) *If you want to test the kernel module on another machine, **please add yours in COMPATIBLE_MACHINE** inside the file meta-hrmonitor/recipes-lkmodule/virtualppg/virtualppg.bb*
+
+For example:
+
+```
+COMPATIBLE_MACHINE = '(raspberrypi|qemux86|qemuarm)'
+```
 
 ## Quick Start
 
