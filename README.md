@@ -4,7 +4,9 @@ This is a general overlay made only for learning purpose.
 
 It offers two recipes, one includes a linux kernel module that implements a virtual PPG Sensor (a heart rate monitor), and the other one is an app that reads data from this device and computes the heart rate through the fft.
 
-*This is tested only on RaspberryPi 1!*
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) *This is tested only on RaspberryPi 1!*
+
+![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) *If you want to test the kernel module on another machine, **please add yours in COMPATIBLE_MACHINE** inside the file meta-hrmonitor/recipes-lkmodule/virtualppg/virtualppg.bb*
 
 ## Quick Start
 
@@ -28,7 +30,7 @@ BBLAYERS ?= " \
   "
 ```
 
-Now, register the app and the driver inside you image by editing your conf/local.conf and adding this lines
+Now, register the app and the driver inside you image by editing your conf/local.conf and adding these lines
 
 ```
 IMAGE_INSTALL_append = " virtualppg ppgreader"
@@ -41,4 +43,4 @@ source oe-init-build-env build_dir
 bitbake core-image-full-cmdline
 ```
 
-*Enhoy!*
+*Enjoy!*
